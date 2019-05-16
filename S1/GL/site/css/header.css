@@ -1,0 +1,475 @@
+.Banner{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Banner-Title{
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 60px;
+    font-family: 'Unlock', cursive;
+    width: 100%;
+}
+
+.Banner-Menu-Item {
+    text-align: center;
+    font-size: 30px;
+    padding: 40px;
+    background-color: lightgrey;
+    margin: 5%;
+    width: 60%;
+}
+
+.Banner-Menu-Item:hover {
+    background-color: #e0e0e0;
+}
+
+
+.button-container{
+    display: flex;
+    flex-wrap: initial;
+}
+
+.button-connect{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bloc-password{
+    display: table-cell;
+    text-align: center;
+}
+
+.bloc-pseudo{
+    display: table-cell;
+    text-align: center;
+}
+
+.bloc-form{
+    text-align: center;
+    display: table;
+}
+
+.hidden{
+    display: none;
+}
+
+.Button{
+    cursor: pointer;
+}
+
+/**
+    main_chief.html
+*/
+
+.right{
+    text-align: right;
+    font-size: 10px;
+    color: black;
+}
+
+.label-disconnect{
+    color: black;
+}
+
+.Content{
+    margin-top: 10px;
+}
+
+/**
+    DON'T TOUCH !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+.bandeau-connection{
+    text-align: right;
+}
+
+.buttons-bar{
+    margin-left: 30px;
+}
+/**
+    Fin don't touch.
+*/
+
+.order-container{
+    display: inherit;
+}
+
+.command-bloc{
+    width: 45%;
+    text-align: center;
+    height: 100%;
+    border-right: 2px solid black;
+}
+
+.command-title{
+    font-size: 26px;
+}
+
+.preps-title{
+    font-size: 26px;
+}
+
+.preps-bloc{
+    width: 45%;
+    text-align: center;
+    height: 275px;
+}
+
+.order-number{
+    font-weight: bold;
+    font-size: 22px;
+    text-align: left;
+    margin-bottom: 5px;
+    border-bottom: 1px lightgrey solid;
+}
+
+.order-state{
+    margin-left: 15px;
+}
+
+.spoil-menu{
+    margin-left: 15px;
+    text-align: right;
+}
+
+.dishname{
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+    display: table-row;
+    width: 100%;
+    border-bottom: 1px lightgrey solid;
+}
+
+.progress-div{
+    border-bottom: 1px lightgrey solid;
+}
+
+/* .more-details{
+    border-bottom: 1px lightgrey solid;
+} */
+
+.dishtime{
+    width: 10%;
+}
+
+.progress{
+    border-radius: 50px;
+    width: 45%;
+    text-align: right;
+}
+
+.details-line{
+    margin-bottom: 5px;
+}
+
+.more-more-details{
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/**
+    PREPARATIONS
+*/
+
+.prep-name{
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.prep-title-line{
+    text-align: left;
+    width: 100%;
+}
+
+.prep-state{
+    text-align: right;
+    margin-right: 0;
+}
+
+.prep-line{
+    margin-bottom: 5px;
+    border-bottom: 1px lightgrey solid;
+}
+
+/**
+    CONFIG TABLETTE
+*/
+
+.params-config{
+    text-align: center;
+}
+
+.table-config{
+    margin-top: 15%;
+    margin-bottom: 5px;
+    display: inline-flex;
+}
+
+.table-container{
+  display: inline-flex;
+}
+
+.add-table{
+    margin-left: 10px;
+}
+
+
+.ppl-num{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.confirm-config{
+    margin-top: 5px;
+}
+
+/**
+    STOCKS
+*/
+
+.stock-buttons{
+    margin-bottom: 10px;
+}
+
+/**
+    MODE PATRON
+*/
+.button-add-product{
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+.dropdown-item{
+  cursor: pointer;
+}
+
+.under_cat{
+  margin: 10px 0 10px 0;
+}
+
+.product-created{
+  color: green;
+  text-align: center;
+  font-size: 22px;
+}
+
+.suggest-preview{
+  text-align: center;
+}
+
+.buttons-suggest{
+  text-align: center;
+  margin: 10px;
+}
+
+.buttons-suggest .btn {
+  margin: 10px;
+}
+
+.buttons-orders-tracker {
+  margin: 10px 0 10px 0;
+  text-align: center;
+}
+
+.buttons-orders-tracker .btn{
+  margin: 0 5px 0 5px;
+}
+
+/**
+  MODE SERVEUR
+*/
+
+.action-buttons .btn{
+  margin-right: 5px;
+}
+
+.confirm-choice {
+  text-align: center;
+}
+
+.confirm-buttons .btn{
+  margin: 10px;
+}
+
+.served{
+  color: green;
+  font-weight: bold;
+}
+
+.paid{
+  color: CornflowerBlue;
+  font-weight: bold;
+}
+
+.loading{
+  color: orange;
+  font-weight: bold;
+}
+
+.ready{
+  color: #80ff00;
+  font-weight: bold;
+}
+
+.ordered{
+  color: red;
+  font-weight: bold;
+}
+
+.modif-buttons{
+  text-align: center;
+  margin: 10px;
+}
+
+.modif-buttons .btn{
+  margin: 10px;
+}
+
+/**
+  MENU
+*/
+.menu-title, .preview-title{
+  font-size: 22px;
+  text-align: center;
+}
+.search-bar{
+  width: 40%;
+  margin: auto;
+}
+
+.category-menu{
+  font-size: 20px;
+  margin-left: 5px 15px 5px 0;
+  font-weight: bold;
+  display: flex;
+  border-bottom: 1px lightgrey solid;
+}
+
+.under-category-menu{
+  font-size: 20px;
+  display: flex;
+  font-weight: bold;
+  margin: 5px 15px 5px 0
+}
+
+.menu-item{
+  display: flex;
+  font-weight: bold;
+  border-bottom: 1px solid lightgrey;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.item-disp{
+  color: green;
+}
+.image{
+  text-align: center;
+}
+.image img{
+  max-width: 436px;
+  max-height: 290px;
+  margin: 10px 0 10px 0;
+}
+
+.spand-button{
+  text-align: right;
+}
+
+.infos-item{
+  display: flex;
+}
+
+.item-line{
+  display: flex;
+  margin-bottom: 2px;
+}
+
+.item-name{
+  font-weight: normal;
+  font-size: 14px;
+  margin: auto 0 auto 0;
+}
+
+.item-delbutton .btn{
+  border-radius: 50%;
+}
+
+.list-ingredients{
+  max-height: 150px;
+  overflow-y: scroll;
+}
+/**
+  Paiement
+**/
+.commande-paiement-thead, .commande-paiement-tfoot-txt{
+  background-color: LightSlateGray;
+}
+
+button.regler-a-plusieurs{
+  margin-right: 50px;
+  background-color: DarkBlue;
+}
+
+.choix_reste_conso{
+  display: flex;
+}
+
+/**
+  SERVEUSE NOTIFS
+*/
+.single-notif{
+  display: flex;
+  text-align: center;
+  margin: 5px 0 5px 5px;
+  padding: 10px 0 10px 0;
+  background-color: darkblue;
+  color: white;
+  height: 50px;
+  width: 99%;
+  border: 1px solid darkblue;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.single-notif:hover{
+  background-color: blue;
+  border-color: blue;
+}
+
+.notif-icon{
+  font-size: 20px;
+}
+
+/**
+  PREVIEW PRODUCT
+*/
+.preview-image img{
+  text-align: center;
+  width: 500px;
+  height: 300px;
+}
+
+.preview-image{
+  text-align: center;
+}
+
+.preview-infos{
+  display: flex;
+}
+
+.preview-card{
+  width: 45%;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 20px;
+}

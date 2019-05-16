@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8" />
+        <title>Rest'Au'Rang</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- project css -->
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="icon" href="resources/icon.png">
+    </head>
+
+    <body>
+		<section class="bandeau-connection">
+            <section class="label-connect col-xs-12 col-md-12 col-lg-12">
+                <div class="right label-disconnect"><label><a href="index.html" style="color:black;"><u>Retour à l'accueil</u></a></label></div>
+            </section>
+        </section>
+        <section class="Banner">
+            <div class="Banner-Title">Rest'Au'Rang</div>
+            <section class="label-connect col-xs-12 col-md-12 col-lg-12">
+                <div class="row bloc-form">
+                    <div class="bloc-pseudo col-lg-6 col-xs-6 col-md-6">
+                            <div class="col-xs-6 col-md-6 col-lg-6">
+                                <label for="pseudo">Adresse mail</label>
+                            </div>
+                            <div class="col-xs-6 col-md-6 col-lg-6">
+                                <input type="text" id="pseudo" placeholder="mail"/>
+                            </div>
+                        </div>
+                        <div class="bloc-password col-lg-6 col-xs-6 col-md-6">
+                            <div class="col-lg-6 col-xs-6 col-md-6">
+                                <label for="password">Mot de passe</label>
+                            </div>
+                            <div class="col-lg-6 col-xs-6 col-md-6">
+                                <input type="password" id="password" placeholder="password"/>
+                            </div>
+                        </div>
+                </div>
+                <div class="button-connect">
+                    <button type="button" class="col-lg-6 col-xs-6 col-md-6 btn btn-success" onclick="auth()">Se connecter</button>
+                </div>
+				<div class="informations-connexion">
+					<p>Pour vous connecter en tant que <b>serveur</b> tapez l'adresse mail suivante : <b>sophie@gmail.com</b>
+					<br/> Pour vous connecter en tant que <b>barman</b> tapez l'adresse mail suivante : <b>barbara@gmail.com</b>
+					<br/>Pour vous connecter en tant que <b>chef cuisinier</b> tapez l'adresse mail suivante : <b>charles@gmail.com</b>
+					<br/>Pour vous connecter en tant que <b>glacier</b> tapez l'adresse mail suivante : <b>gilles@gmail.com</b>
+					<br/>Pour vous connecter en tant que <b>patron</b> tapez l'adresse mail suivante : <b>pascal@gmail.com</b> </p>
+				</div>
+            </section>
+        </section>
+        <section class="Content">
+
+        </section>
+        <section class="Footer">
+
+        </section>
+
+
+        <script src="bootstrap/js/jquery.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        <!-- ############### SCRIPTS AUTHENTIFICATOR ####################### -->
+        <script type="text/javascript">
+            function auth(){
+                var pseudo = document.getElementById("pseudo").value;
+                var password = document.getElementById("password").value;
+
+                switch(pseudo.toLowerCase()){
+                    case "sophie@gmail.com":
+                        location.href="main_waiter.html";
+                        break;
+                    case "charles@gmail.com":
+                        location.href="main_chief.html";
+                        break;
+                    case "barbara@gmail.com":
+                        location.href="main_barmaid.html";
+                        break;
+                    case "gilles@gmail.com":
+                        location.href="main_icemaker.html";
+                        break;
+                    case "pascal@gmail.com":
+                        location.href="main_boss.html";
+                        break;
+                    default:
+                        console.log("### MODE INVITÉ");
+                }
+            }
+
+        </script>
+
+    </body>
+</html>
