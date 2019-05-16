@@ -1,0 +1,7 @@
+Running: xsim.dir/tp2_exo4_add4bit_behav/xsimk -simmode gui -wdb tp2_exo4_add4bit_behav.wdb -simrunnum 0 -socket 49249
+Design successfully loaded
+Design Loading Memory Usage: 43144 KB (Peak: 43200 KB)
+Design Loading CPU Usage: 10 ms
+Simulation completed
+Simulation Memory Usage: 124880 KB (Peak: 190416 KB)
+Simulation CPU Usage: 20 ms
