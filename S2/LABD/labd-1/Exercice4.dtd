@@ -1,0 +1,25 @@
+<!ELEMENT transpole (depart, arrivee, date, modes, preference, vitesseMarche, tempsParcours, itineraire)>
+<!ELEMENT depart (#PCDATA)>
+<!ELEMENT arrivee (#PCDATA)>
+<!ELEMENT date (jour, horaire)>
+<!ELEMENT jour (#PCDATA)>
+<!ELEMENT horaire (#PCDATA)>
+<!ELEMENT modes (mode*)>
+<!ELEMENT mode (#PCDATA)>
+<!ELEMENT preference (#PCDATA)>
+<!ELEMENT vitesseMarche (#PCDATA)>
+<!ELEMENT tempsParcours (heure, minutes)>
+<!ELEMENT heure (#PCDATA)>
+<!ELEMENT minutes (#PCDATA)>
+<!ELEMENT itineraire (etape+)>
+<!ELEMENT etape (ligne?, duree, arretFin)>
+<!ATTLIST etape horaire CDATA #IMPLIED
+		     mode CDATA #REQUIRED
+		     compagnie CDATA #IMPLIED>
+<!ELEMENT ligne (#PCDATA)>
+<!ATTLIST ligne direction CDATA #REQUIRED>
+<!ELEMENT duree (#PCDATA)>
+<!ATTLIST duree unite CDATA #REQUIRED>
+<!ELEMENT arretFin (#PCDATA)>
+
+

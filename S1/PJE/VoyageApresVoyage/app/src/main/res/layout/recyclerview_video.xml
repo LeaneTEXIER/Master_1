@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_note"
+    android:layout_margin="@dimen/margin_liste_note"
+    android:id="@+id/a_video"
+    android:background="@drawable/background_list_notes">
+
+    <TextView
+        android:id="@+id/video_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_inside_recyclerview_liste_note"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/video_lieu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_inside_recyclerview_liste_note"/>
+
+</LinearLayout>

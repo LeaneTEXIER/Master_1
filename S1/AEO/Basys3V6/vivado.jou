@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Nov 20 21:01:16 2018
+# Process ID: 16748
+# Current directory: C:/Users/jld/Downloads/Basys3V6.xpr/Basys3V6
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17388 C:\Users\jld\Downloads\Basys3V6.xpr\Basys3V6\Basys3V6.xpr
+# Log file: C:/Users/jld/Downloads/Basys3V6.xpr/Basys3V6/vivado.log
+# Journal file: C:/Users/jld/Downloads/Basys3V6.xpr/Basys3V6\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/jld/Downloads/Basys3V6.xpr/Basys3V6/Basys3V6.xpr
+update_compile_order -fileset sources_1
+launch_runs impl_2 -to_step write_bitstream -jobs 24
+wait_on_run impl_2
+archive_project C:/Users/jld/Downloads/Basys3V6.xpr/Basys3V6.xpr.zip -temp_dir C:/Users/jld/Downloads/Basys3V6.xpr/Basys3V6/.Xil/Vivado-16748-jld-HP -force -exclude_run_results -include_local_ip_cache -include_config_settings

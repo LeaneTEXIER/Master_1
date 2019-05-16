@@ -1,0 +1,217 @@
+.MenusContent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 70%;
+}
+
+.MenuContentRow{
+   width: 48%;
+   margin: 0.5%;
+}
+
+.MenuContentRow:first-child{
+    overflow-y:scroll;
+}
+
+.MenuContentRow:last-child{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.CategoryHeader, #ProductName{
+    font-style: bold;
+    text-align: center;
+    font-size: 30px;
+    line-height: 35px;
+    height: 35px;
+}
+
+.Actions{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.Actions div{
+    padding: 2px;
+    margin: 2px;
+    background-color: lightgrey;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.Actions div:hover{
+    background-color: #e0e0e0;
+}
+
+.hide, .collapse{
+    display: none;
+}
+
+.collapse-show{
+    display: block;
+    padding: 10px;
+}
+
+.product-infos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu-header{
+    padding-left: 2%;
+    margin-top: 0.5%;
+    height: 35px;
+    line-height: 35px;
+    font-size: 20px;
+    font-style: bold;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.product-infos{
+    margin-bottom: 4px;
+    height: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.product-infos div:first-child{
+    width: 150px;
+}
+
+.avaible{
+    width: 25px;
+    height: 15px;
+    background-color: green;
+}
+
+.unavaible{
+    width: 25px;
+    height: 15px;
+    background-color: red;
+}
+
+#ProductImage{
+    width: 96%;
+    height: 50%;
+}
+
+.deleteElem{
+    width: 20px;
+    height: 20px;
+    background: url("../resources/delete.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ProductInfo{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2%;
+    width: 100%;
+    height: 30%;
+}
+
+.MenuContentRow.ProductDetails{
+  display: none;
+}
+
+#ProductIngredients{
+    overflow-y:scroll;
+    width: 50%;
+    height: 120%;
+}
+
+.ProductValue{
+    width: 40%;
+    height: 110%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#qteValue{
+    size: 2;
+    width: 30px;
+    height: 20px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.countQt{
+    width: 32px;
+    height: 20px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.Quantity{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.IngreditDeleter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5%;
+}
+
+.addToCart{
+    width: 100%;
+    background-color: lightgrey;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.addToCart:hover{
+    background-color: #e0e0e0;
+}
+
+
+.search-container{
+    text-align: center;
+    margin: 10px;
+}
+
+.search-container input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 15px;
+    border: 1px solid black;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul li {
+    border: 1px solid #ddd;
+    margin-top: -1px;
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+  }

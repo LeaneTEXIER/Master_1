@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_trip_list"
+    android:layout_margin="@dimen/margin_liste_note"
+    android:id="@+id/a_trip"
+    android:background="@drawable/background_list_trips">
+
+    <TextView
+        android:id="@+id/trip_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="@dimen/list_trips_name_size"
+        android:layout_margin="@dimen/margin_inside_recyclerview_liste_note"
+        android:textColor="@color/colorAccent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/margin_inside_recyclerview_liste_note"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/trip_debut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="@dimen/margin_inside_recyclerview_liste_note"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/colorAccent"/>
+
+        <TextView
+            android:id="@+id/trip_fin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/margin_inside_recyclerview_liste_note"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/colorAccent"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:element name="stock">
+ 	<xsd:complexType>
+ 		<xsd:sequence>
+ 			<xsd:element name="occases" type="occasesType" />
+ 			<xsd:element name="neufs" type="neufsType" />
+ 		</xsd:sequence>
+ 		<xsd:attribute name="nom" type="xsd:string" use="required"/>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:complexType name="occasesType">
+	<xsd:sequence>
+		<xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="itemOccasesType"/>
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="neufsType">
+	<xsd:sequence>
+		<xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="itemNeufsType"/>
+	</xsd:sequence>
+</xsd:complexType>
+
+
+<xsd:group name="TypeItemCommun">
+	<xsd:sequence>
+		<xsd:element name="marque" type="xsd:string"/>
+		<xsd:element name="modele" type="xsd:string"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="itemOccasesType">
+	<xsd:sequence>
+		<xsd:group ref="TypeItemCommun"/>
+		<xsd:element name="annee" type="annee"/>
+	</xsd:sequence>
+	<xsd:attribute name="prix" type="xsd:positiveInteger" use="required"/>
+</xsd:complexType>
+
+<xsd:complexType name="itemNeufsType">
+	<xsd:sequence>
+		<xsd:group ref="TypeItemCommun"/>
+	</xsd:sequence>
+	<xsd:attribute name="prix" type="xsd:positiveInteger" use="required"/>
+</xsd:complexType>
+
+<xsd:simpleType name="annee">
+	<xsd:restriction base="xsd:positiveInteger">
+		<xsd:totalDigits value="4"></xsd:totalDigits>
+	</xsd:restriction>
+</xsd:simpleType>
+
+</xsd:schema>

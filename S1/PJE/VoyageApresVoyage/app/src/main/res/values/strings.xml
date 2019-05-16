@@ -1,0 +1,100 @@
+<resources>
+    <!-- Yes / No -->
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+
+    <!-- Multiple uses -->
+    <string name="create">Créer</string>
+    <string name="supp">Supprimer</string>
+    <string name="modify">Modifier</string>
+    <string name="consult">Consulter</string>
+    <string name="save">Sauvegarder</string>
+    <string name="valid">Valider</string>
+
+    <!-- Lieu -->
+    <string name="no_place">Pas de lieu</string>
+    <string name="place">Lieu</string>
+
+    <!-- Dates -->
+    <string name="formatDate">JJMMAAAA</string>
+    <string name="date_not_complete">Date incomplète</string>
+    <string name="date">Date</string>
+
+    <!-- Home -->
+    <string name="app_name">VoyageApresVoyage</string>
+    <string name="quote">Quand rien n\'est prévu, tout est possible...</string>
+    <string name="create_trip">Créer voyage</string>
+    <string name="my_trips">Mes voyages</string>
+
+    <!-- Trip -->
+    <string name="supp_trip_question">Etes-vous sur de vouloir supprimer ce voyage?</string>
+    <string name="supp_trip">Voyage supprimé</string>
+    <string name="no_trip">Vous n\'avez actuellement aucun voyage</string>
+    <string name="add_trip_success">Voyage créé avec succès</string>
+    <string name="add_trip_fail">Voyage non créé</string>
+    <string name="modif_trip_success">Voyage modifié avec succès</string>
+
+    <string name="name_of_my_trip">Nom de mon voyage</string>
+    <string name="date_begin">Date de début</string>
+    <string name="date_end">Date de fin</string>
+    <string name="place_optional">Lieu (optionnel)</string>
+    <string name="description">Description (optionnelle)</string>
+    <string name="tags">Tags (optionnels)</string>
+
+    <string name="name_trip_required">Le nom du voyage est obligatoire et doit être non vide !</string>
+    <string name="date_begin_trip_required">La date de début du voyage est obligatoire !</string>
+    <string name="date_end_trip_required">La date de fin du voyage est obligatoire !</string>
+    <string name="date_end_before_begin">La date de fin doit être supérieure ou égale à la date de début</string>
+
+    <!-- Modifications trip => different categories -->
+    <string name="data">INFORMATIONS</string>
+    <string name="pics">PHOTOS</string>
+    <string name="notes">NOTES</string>
+    <string name="videos">VIDEOS</string>
+    <string name="map">CARTE</string>
+
+
+    <!-- Notes -->
+    <string name="my_notes">Mes notes</string>
+    <string name="notes_not_upper">Notes</string>
+    <string name="supp_note_question">Etes-vous sur de vouloir supprimer cette note?</string>
+    <string name="supp_note">Note supprimée</string>
+    <string name="no_note">Vous n\'avez aucune note pour ce voyage</string>
+    <string name="add_note_success">Note ajoutée avec succès</string>
+    <string name="add_note_fail">Note non sauvegardée</string>
+    <string name="name_of_my_note">Nom de ma note</string>
+    <string name="modif_note_success">Note modifiée avec succès</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="search">Rechercher par tags</string>
+    <string name="name_note_required">Le nom de la note est obligatoire et doit être non vide !</string>
+    <string name="date_note_required">La date de la note est obligatoire et doit être complète!</string>
+
+    <!-- Photos -->
+    <string name="my_photos">Mes photos</string>
+    <string name="photos_not_upper">Photos</string>
+    <string name="supp_photo_question">Etes-vous sur de vouloir supprimer cette photo?</string>
+    <string name="supp_photo">Photo supprimée</string>
+    <string name="title_photo">Titre de la photo</string>
+    <string name="no_photo">Vous n\'avez aucune photo pour ce voyage</string>
+    <string name="add_photo_not_taken">Photo non prise</string>
+    <string name="name_photo_default_begin">Photo du\ </string>
+    <string name="modif_photo_success">Photo modifiée avec succès</string>
+    <string name="name_of_my_photo">Nom de ma photo</string>
+
+    <!-- Videos -->
+    <string name="my_videos">Mes vidéos</string>
+    <string name="videos_not_upper">Vidéos</string>
+    <string name="supp_video_question">Etes-vous sur de vouloir supprimer cette vidéo?</string>
+    <string name="supp_video">Vidéo supprimée</string>
+    <string name="add_video_not_taken">Vidéo non prise</string>
+    <string name="name_video_default_begin">Vidéo du </string>
+    <string name="at"> à </string>
+    <string name="no_video">Vous n\'avez aucune video pour ce voyage</string>
+    <string name="modif_video_success">Video modifiée avec succès</string>
+    <string name="name_of_my_video">Nom de ma vidéo</string>
+
+    <!-- Tags -->
+    <string name="tags_form">Tags</string>
+
+
+</resources>

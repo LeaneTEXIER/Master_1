@@ -1,0 +1,15 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
+| Date         : Wed Nov  7 11:23:01 2018
+| Host         : a13p3 running 64-bit Ubuntu 18.04.1 LTS
+| Command      : report_bus_skew -warn_on_violation -file alarme_top_bus_skew_routed.rpt -pb alarme_top_bus_skew_routed.pb -rpx alarme_top_bus_skew_routed.rpx
+| Design       : alarme_top
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

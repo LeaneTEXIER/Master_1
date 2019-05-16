@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ns0="http://fr.dbpedia.org/property/"
+         xmlns:ns1="http://www.labd.org/2015/voitures/schema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <rdf:Description rdf:about="http://www.labd.org/2015/voitures/schema#C4">
+    <rdf:type rdf:resource="http://www.labd.org/2015/voitures/schema#Voiture"/>
+    <ns0:nom xml:lang="fr">C4</ns0:nom>
+    <ns1:marque>
+      <ns1:Societe rdf:about="http://www.labd.org/2015/voitures/schema#Citroen">
+        <ns0:nom xml:lang="fr">Citroën</ns0:nom>
+        <ns0:year>1919</ns0:year>
+      </ns1:Societe>
+    </ns1:marque>
+
+  </rdf:Description>
+
+  <rdfs:Class rdf:about="http://www.labd.org/2015/voitures/schema#Voiture">
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://www.labd.org/2015/voitures/schema#marque">
+    <rdfs:domain rdf:resource="http://www.labd.org/2015/voitures/schema#Voiture"/>
+    <rdfs:range rdf:resource="http://www.labd.org/2015/voitures/schema#Societe"/>
+  </rdf:Property>
+
+  <rdfs:Class rdf:about="http://www.labd.org/2015/voitures/schema#Societe">
+  </rdfs:Class>
+
+</rdf:RDF>

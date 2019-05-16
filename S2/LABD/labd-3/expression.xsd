@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:element name="expr">
+	<xsd:complexType>
+		<xsd:group ref="exprType"/>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:group name="exprType">
+	<xsd:choice>
+ 		<xsd:element name="cons" type="xsd:integer" />
+ 		<xsd:element name="var" type="xsd:string" />
+ 		<xsd:element name="op" type="opType" />
+ 	</xsd:choice>
+</xsd:group>
+
+<xsd:complexType name="opType">
+	<xsd:sequence minOccurs="2" maxOccurs="2">
+		<xsd:group ref="exprType"/>
+	</xsd:sequence>
+	<xsd:attribute name="val" type="valType" use="required"/>
+</xsd:complexType>
+
+<xsd:simpleType name="valType">
+	<xsd:restriction base="xsd:token">
+		<xsd:enumeration value="+"/>
+		<xsd:enumeration value="-"/>
+		<xsd:enumeration value="*"/>
+		<xsd:enumeration value="/"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+</xsd:schema>

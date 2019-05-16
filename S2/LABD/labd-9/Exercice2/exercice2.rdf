@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ns0="http://fr.dbpedia.org/property/"
+         xmlns:ns1="http://www.labd.org/2015/voitures/schema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <rdf:Description rdf:about="http://www.labd.org/2015/voitures/schema#Boby">
+    <rdf:type rdf:resource="http://www.labd.org/2015/voitures/schema#Personne"/>
+    <ns0:nom xml:lang="fr">Boby</ns0:nom>
+    <ns1:pense>
+      <rdf:Statement rdf:about="http://www.labd.org/2015/voitures/schema#LeonMalade">
+        <rdf:subject>
+          <ns1:Personne rdf:about="http://www.labd.org/2015/voitures/schema#Leon">
+            <ns0:nom xml:lang="fr">Léon</ns0:nom>
+          </ns1:Personne>
+        </rdf:subject>
+
+        <rdf:predicate>
+          <rdfs:Class rdf:about="http://www.labd.org/2015/voitures/schema#Est">
+          </rdfs:Class>
+        </rdf:predicate>
+
+        <rdf:object>
+          <rdfs:Class rdf:about="http://www.labd.org/2015/voitures/schema#Malade">
+          </rdfs:Class>
+        </rdf:object>
+
+      </rdf:Statement>
+    </ns1:pense>
+
+  </rdf:Description>
+
+</rdf:RDF>

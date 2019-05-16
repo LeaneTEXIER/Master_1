@@ -1,0 +1,25 @@
+@prefix labd: <http://www.labd.org/2015/voitures/schema#> .
+@prefix dbpr: <http://fr.dbpedia.org/property/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+labd:C4
+	a labd:Voiture;
+	dbpr:nom "C4"@fr;
+	labd:marque labd:Citroen .
+
+labd:Voiture 
+	a rdfs:Class.
+
+labd:marque 
+	a rdf:Property;
+	rdfs:domain labd:Voiture;
+	rdfs:range labd:Societe.
+
+labd:Citroen
+	a labd:Societe;
+	dbpr:nom "Citroën"@fr;
+    dbpr:year "1919".
+
+labd:Societe 
+	a rdfs:Class.

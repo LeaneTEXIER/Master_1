@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE transpole SYSTEM "Exercice4.dtd">
+<transpole>
+	<depart>Seclin - Centre hospitalier</depart>
+	<arrivee>Roubaix - Avenue Motte</arrivee>
+	<date>
+		<jour>Mardi 22 janvier</jour>
+		<horaire>12h35</horaire>
+	</date>
+	<modes>
+		<mode>Métro</mode>
+		<mode>Tramway</mode>
+		<mode>Bus</mode>
+		<mode>Car</mode>
+	</modes>
+	<preference>Arriver le plus rapidement</preference>
+	<vitesseMarche>Normale</vitesseMarche>
+	<tempsParcours>
+		<heure>1</heure>
+		<minutes>27</minutes>
+	</tempsParcours>
+	<itineraire>
+		<etape mode="Marche">
+			<duree unite="min">13</duree>
+			<arretFin>Seclin - Hôtel de Ville</arretFin>
+		</etape>
+		<etape horaire="14h51" mode="Bus" compagnie="TRANSPOLE">
+			<ligne direction="Lille - Porte des Postes">52</ligne>
+			<duree unite="min">23</duree>
+			<arretFin>Lille - CHR B Calmette</arretFin>
+		</etape>
+		<etape horaire="15h18" mode="Métro" compagnie="TRANSPOLE">
+			<ligne direction="Villeneuve d’Ascq - 4 Cantons Grand Stade">1</ligne>
+			<duree unite="min">3</duree>
+			<arretFin>Lille - Porte des Postes</arretFin>
+		</etape>
+		<etape horaire="15h27" mode="Métro" compagnie="TRANSPOLE">
+			<ligne direction="Tourcoing - CH Dron">2</ligne>
+			<duree unite="min">25</duree>
+			<arretFin>Roubaix - Epeule Montesquieu</arretFin>
+		</etape>
+		<etape horaire="15h56" mode="Bus" compagnie="TRANSPOLE">
+			<ligne direction="Roubaix - fraternité">25</ligne>
+			<duree unite="min">9</duree>
+			<arretFin>Roubaix - Avenue Motte</arretFin>
+		</etape>
+	</itineraire>
+</transpole>

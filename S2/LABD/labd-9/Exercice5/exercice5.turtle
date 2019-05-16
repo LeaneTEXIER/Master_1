@@ -1,0 +1,72 @@
+@prefix labd: <http://www.labd.org/2015/sport/schema#> .
+@prefix dbpr: <http://fr.dbpedia.org/property/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+labd:Sport
+	a rdfs:Class.
+
+labd:SportCollectif
+	a rdfs:Class;
+    rdfs:subClassOf labd:Sport.
+
+labd:SportCollectifBallon
+	a rdfs:Class;
+	   rdfs:subClassOf labd:SportCollectif.
+
+labd:SportIndividuel
+	a rdfs:Class;
+    rdfs:subClassOf labd:Sport.
+
+labd:Lieu
+	a rdf:Property;
+ 		rdfs:range rdf:Literal;
+ 		rdfs:domain labd:Sport.
+
+labd:Stade
+    a rdfs:Class;
+	    rdfs:subClassOf labd:Lieu.
+
+labd:Terrain
+	 a rdfs:Class;
+		 rdfs:subClassOf labd:Lieu.
+
+labd:NbEquipe
+	a rdf:Property;
+		rdfs:range rdf:Literal;
+		rdfs:domain labd:SportCollectif.
+
+labd:NbJoueursEquipe
+	 a rdf:Property;
+	 	rdfs:range rdf:Literal;
+	 	rdfs:domain labd:SportCollectif.
+
+labd:Objectif
+  a rdf:Property;
+  	rdfs:range rdf:Literal;
+  	rdfs:domain labd:Sport.
+
+labd:Panier
+    a rdfs:Class.
+
+labd:But
+    a rdfs:Class.
+
+labd:Football
+	a rdfs:Class;
+    rdfs:subClassOf labd:SportCollectifBallon;
+    dbpr:nom "Football"@fr;
+    dbpr:nom "Soccer"@en;
+		labd:Lieu labd:Stade;
+		labd:Objectif labd:But;
+		labd:NbJoueursEquipe "11";
+		labd:NbEquipe "2".
+
+labd:Basket
+	a rdfs:Class;
+    rdfs:subClassOf labd:SportCollectifBallon;
+    dbpr:nom "Basketball"@fr;
+		labd:Lieu labd:Terrain;
+		labd:Objectif labd:Panier;
+		labd:NbJoueursEquipe "5";
+		labd:NbEquipe "2".

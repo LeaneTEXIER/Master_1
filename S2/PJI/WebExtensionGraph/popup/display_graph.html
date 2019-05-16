@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="display_graph.css"/>
+  </head>
+
+  <body>
+    <script src="../d3/d3.min.js"></script>
+    <script src="../d3/d3.js"></script>
+    <script src="display_graph.js"></script>
+    <div class="title">
+      <button class="resetAndLoadData">Reset and load page's data</button>
+      <button class="displayPreviousData">Display previous data</button>
+    </div>
+    <div class="changeAxis">
+        <label for="axisx">Axis x: </label>
+        <select id="axisx" class="selectAxisX"></select>
+
+        <label for="axisy">Axis y:</label>
+        <select id="axisy" class="selectAxisY"></select>
+
+        <button class="changeAxisSubmit">Submit</button>
+    </div>
+    <p class="informations"></p>
+    <h5 class="titleGraph"></h5>
+  </body>
+
+</html>

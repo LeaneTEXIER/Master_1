@@ -1,0 +1,12 @@
+
+{ 
+    crc :  1084645933156983488  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 6fdcbbd7b5d7490b8ae7eab9881f38bb --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot chenillard_behav xil_defaultlib.chenillard" , 
+    buildDate : "Jul 26 2018" , 
+    buildTime : "18:27:14" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/chenillard_behav/xsimk\"   \"xsim.dir/chenillard_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/chenillard_behav/obj/xsim_1.lnx64.o\" \"/local/xilinx-vivado/Vivado/2018.2/lib/lnx64.o/librdi_simulator_kernel.so\"  \"/local/xilinx-vivado/Vivado/2018.2/lib/lnx64.o/librdi_simbridge_kernel.so\"" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

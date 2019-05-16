@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.PhotosList.DetailsPhotoActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight = "0"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/TitrePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_create_modif_note_champs"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_title_detail_photo_video"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/modifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_create_modif_note_champs"
+            android:onClick="modifPhoto"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_edit_black_24dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/supprimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_create_modif_note_champs"
+            android:onClick="supprimerPhoto"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_delete_black_24dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight = "0"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/LieuPhoto"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_create_modif_note_champs"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textSize="@dimen/size_info_details_photo_video"/>
+
+        <TextView
+            android:id="@+id/DatePhoto"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_create_modif_note_champs"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:inputType="date"
+            android:textSize="@dimen/size_info_details_photo_video"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/DetailPhoto"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_create_modif_note_champs"/>
+
+    <TextView
+        android:id="@+id/TagsPhoto"
+        android:layout_weight = "0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="@dimen/detail_height_tags"
+        android:layout_margin="@dimen/margin_create_modif_note_champs"
+        android:textAlignment="center"
+        android:scrollbars="vertical"
+        android:textSize="@dimen/size_info_details_photo_video"/>
+</LinearLayout>

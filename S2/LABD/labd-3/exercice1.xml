@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercice1 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="exercice1.xsd">
+	<heure>02:55:55</heure>
+	<nombre>3</nombre>
+	<chaineQuatreCaractere>mmmm</chaineQuatreCaractere>
+	<chaineSpeciale>gif</chaineSpeciale>
+	<numISBN>9782744072369</numISBN>
+</exercice1>

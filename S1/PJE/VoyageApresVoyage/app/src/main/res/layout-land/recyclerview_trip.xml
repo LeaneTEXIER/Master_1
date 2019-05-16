@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.ModificationsTripActivity">
+
+    <TextView
+        android:id="@+id/nomVoyage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight = "0"
+        android:textStyle="bold"
+        android:textSize="@dimen/modif_nom_voyage_size"
+        android:layout_margin="@dimen/margin_create_modif_note_champs"
+        android:text="%1$s"
+        android:textColor="#FF000000"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:id="@+id/Infos"
+            android:onClick="showInfo"
+            android:background="@color/colorPrimary"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/modif_layout_margin_button_Top_Bottom"
+            android:layout_marginBottom="@dimen/modif_layout_margin_button_Top_Bottom"
+            android:layout_marginLeft="@dimen/modif_layout_margin_button_Left_Right"
+            android:layout_marginRight="@dimen/modif_layout_margin_button_Left_Right">
+
+            <ImageView
+                android:id="@+id/imageInfos"
+                android:layout_width="@dimen/modif_size_icons"
+                android:layout_height="@dimen/modif_size_icons"
+                android:layout_weight="0"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/modif_layout_margin_icons"
+                android:src="@drawable/informations_icon"/>
+
+            <TextView
+                android:id="@+id/textInfos"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/data"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/modif_text_size_button" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:id="@+id/Photos"
+                android:onClick="showPhotos"
+                android:background="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/modif_layout_margin_button_Top_Bottom"
+                android:layout_marginBottom="@dimen/modif_layout_margin_button_Top_Bottom"
+                android:layout_marginLeft="@dimen/modif_layout_margin_button_Left_Right"
+                android:layout_marginRight="@dimen/modif_layout_margin_button_Left_Right">
+
+                <ImageView
+                    android:id="@+id/imagePhotos"
+                    android:layout_width="@dimen/modif_size_icons"
+                    android:layout_height="@dimen/modif_size_icons"
+                    android:layout_weight="0"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/modif_layout_margin_icons"
+                    android:src="@drawable/photos_icon"/>
+
+                <TextView
+                    android:id="@+id/textPhotos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/pics"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/modif_text_size_button" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:id="@+id/Notes"
+                android:onClick="showNotes"
+                android:background="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/modif_layout_margin_button_Top_Bottom"
+                android:layout_marginBottom="@dimen/modif_layout_margin_button_Top_Bottom"
+                android:layout_marginLeft="@dimen/modif_layout_margin_button_Left_Right"
+                android:layout_marginRight="@dimen/modif_layout_margin_button_Left_Right">
+
+                <ImageView
+                    android:id="@+id/imageNotes"
+                    android:layout_width="@dimen/modif_size_icons"
+                    android:layout_height="@dimen/modif_size_icons"
+                    android:layout_weight="0"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/modif_layout_margin_icons"
+                    android:src="@drawable/notes_icon"/>
+
+                <TextView
+                    android:id="@+id/textNotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/notes"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/modif_text_size_button" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:id="@+id/Videos"
+                android:onClick="showVideos"
+                android:background="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/modif_layout_margin_button_Top_Bottom"
+                android:layout_marginBottom="@dimen/modif_layout_margin_button_Top_Bottom"
+                android:layout_marginLeft="@dimen/modif_layout_margin_button_Left_Right"
+                android:layout_marginRight="@dimen/modif_layout_margin_button_Left_Right">
+
+                <ImageView
+                    android:id="@+id/imageVideos"
+                    android:layout_width="@dimen/modif_size_icons"
+                    android:layout_height="@dimen/modif_size_icons"
+                    android:layout_weight="0"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/modif_layout_margin_icons"
+                    android:src="@drawable/videos_icon"/>
+
+                <TextView
+                    android:id="@+id/textVideos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/videos"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/modif_text_size_button" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:id="@+id/Carte"
+                android:onClick="showMap"
+                android:background="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/modif_layout_margin_button_Top_Bottom"
+                android:layout_marginBottom="@dimen/modif_layout_margin_button_Top_Bottom"
+                android:layout_marginLeft="@dimen/modif_layout_margin_button_Left_Right"
+                android:layout_marginRight="@dimen/modif_layout_margin_button_Left_Right">
+
+                <ImageView
+                    android:id="@+id/imageCarte"
+                    android:layout_width="@dimen/modif_size_icons"
+                    android:layout_height="@dimen/modif_size_icons"
+                    android:layout_weight="0"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/modif_layout_margin_icons"
+                    android:src="@drawable/carte_icon"/>
+
+                <TextView
+                    android:id="@+id/textCarte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/map"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/modif_text_size_button" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--<android.support.constraint.ConstraintLayout-->
+        <!--android:id="@+id/Infos"-->
+        <!--android:layout_width="@dimen/modif_layout_width_button"-->
+        <!--android:layout_height="@dimen/modif_h_button_horizontal"-->
+        <!--android:layout_marginTop="@dimen/modif_layout_margin_horizontal"-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--android:onClick="showInfo"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_gravity="center_vertical|center_horizontal">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imageInfos"-->
+            <!--android:layout_width="@dimen/modif_size_icons"-->
+            <!--android:layout_height="@dimen/modif_size_icons"-->
+            <!--android:layout_margin="@dimen/modif_layout_margin_icons_horizontal"-->
+            <!--android:src="@drawable/informations_icon"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textInfos"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center_horizontal|center_vertical"-->
+            <!--android:text="@string/data"-->
+            <!--android:textColor="@color/colorAccent"-->
+            <!--android:textSize="@dimen/modif_text_size_button"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toEndOf="@+id/imageInfos"/>-->
+
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="@dimen/modif_relative_layout_width"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_vertical|center_horizontal"-->
+        <!--android:layout_margin="@dimen/modif_layout_margin_horizontal"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<android.support.constraint.ConstraintLayout-->
+            <!--android:id="@+id/Photos"-->
+            <!--android:layout_width="@dimen/modif_layout_width_button"-->
+            <!--android:layout_height="@dimen/modif_h_button_horizontal"-->
+            <!--android:layout_marginTop="@dimen/modif_layout_margin_horizontal"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:onClick="showPhotos"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_gravity="center_vertical|center_horizontal">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/imagePhotos"-->
+                <!--android:layout_width="@dimen/modif_size_icons"-->
+                <!--android:layout_height="@dimen/modif_size_icons"-->
+                <!--android:layout_margin="@dimen/modif_layout_margin_icons_horizontal"-->
+                <!--android:src="@drawable/photos_icon"-->
+                <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/textPhotos"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center_horizontal|center_vertical"-->
+                <!--android:text="@string/pics"-->
+                <!--android:textColor="@color/colorAccent"-->
+                <!--android:textSize="@dimen/modif_text_size_button"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toEndOf="@+id/imagePhotos"/>-->
+
+        <!--</android.support.constraint.ConstraintLayout>-->
+
+        <!--<android.support.constraint.ConstraintLayout-->
+            <!--android:id="@+id/Notes"-->
+            <!--android:layout_width="@dimen/modif_layout_width_button"-->
+            <!--android:layout_height="@dimen/modif_h_button_horizontal"-->
+            <!--android:layout_marginTop="@dimen/modif_layout_margin_horizontal"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:onClick="showNotes"-->
+            <!--android:layout_gravity="center_vertical|center_horizontal">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/imageNotes"-->
+                <!--android:layout_width="@dimen/modif_size_icons"-->
+                <!--android:layout_height="@dimen/modif_size_icons"-->
+                <!--android:layout_margin="@dimen/modif_layout_margin_icons_horizontal"-->
+                <!--android:src="@drawable/notes_icon"-->
+                <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/textNotes"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center_horizontal|center_vertical"-->
+                <!--android:text="@string/notes"-->
+                <!--android:textColor="@color/colorAccent"-->
+                <!--android:textSize="@dimen/modif_text_size_button"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toEndOf="@+id/imageNotes"/>-->
+
+        <!--</android.support.constraint.ConstraintLayout>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="@dimen/modif_relative_layout_width"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_vertical|center_horizontal"-->
+        <!--android:layout_margin="@dimen/modif_layout_margin_horizontal"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<android.support.constraint.ConstraintLayout-->
+            <!--android:id="@+id/Videos"-->
+            <!--android:layout_width="@dimen/modif_layout_width_button"-->
+            <!--android:layout_height="@dimen/modif_h_button_horizontal"-->
+            <!--android:layout_marginTop="@dimen/modif_layout_margin_horizontal"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:onClick="showVideos"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_gravity="center_vertical|center_horizontal">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/imageVideos"-->
+                <!--android:layout_width="@dimen/modif_size_icons"-->
+                <!--android:layout_height="@dimen/modif_size_icons"-->
+                <!--android:layout_margin="@dimen/modif_layout_margin_icons_horizontal"-->
+                <!--android:src="@drawable/videos_icon"-->
+                <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/textVideos"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center_horizontal|center_vertical"-->
+                <!--android:text="@string/videos"-->
+                <!--android:textColor="@color/colorAccent"-->
+                <!--android:textSize="@dimen/modif_text_size_button"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toEndOf="@+id/imageVideos"/>-->
+
+        <!--</android.support.constraint.ConstraintLayout>-->
+
+        <!--<android.support.constraint.ConstraintLayout-->
+            <!--android:id="@+id/Carte"-->
+            <!--android:layout_width="@dimen/modif_layout_width_button"-->
+            <!--android:layout_height="@dimen/modif_h_button_horizontal"-->
+            <!--android:layout_marginTop="@dimen/modif_layout_margin_horizontal"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:onClick="showMap"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_gravity="center_vertical|center_horizontal">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/imageCarte"-->
+                <!--android:layout_width="@dimen/modif_size_icons"-->
+                <!--android:layout_height="@dimen/modif_size_icons"-->
+                <!--android:layout_margin="@dimen/modif_layout_margin_icons_horizontal"-->
+                <!--android:src="@drawable/carte_icon"-->
+                <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/textCarte"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center_horizontal|center_vertical"-->
+                <!--android:text="@string/map"-->
+                <!--android:textColor="@color/colorAccent"-->
+                <!--android:textSize="@dimen/modif_text_size_button"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toEndOf="@+id/imageCarte"/>-->
+        <!--</android.support.constraint.ConstraintLayout>-->
+    <!--</RelativeLayout>-->
+
+</LinearLayout>

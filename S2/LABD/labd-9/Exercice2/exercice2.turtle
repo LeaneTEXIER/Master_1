@@ -1,0 +1,25 @@
+@prefix labd: <http://www.labd.org/2015/voitures/schema#> .
+@prefix dbpr: <http://fr.dbpedia.org/property/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+labd:Boby
+	a labd:Personne;
+	dbpr:nom "Boby"@fr;
+	labd:pense labd:LeonMalade.
+
+labd:Leon
+	a labd:Personne;
+	dbpr:nom "Léon"@fr.
+
+labd:LeonMalade 
+	a rdf:Statement;
+    rdf:subject labd:Leon;
+	rdf:predicate labd:Est;
+    rdf:object labd:Malade.
+
+labd:Est 
+	a rdfs:Class.
+
+labd:Malade 
+	a rdfs:Class.

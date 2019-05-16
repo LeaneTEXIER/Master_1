@@ -1,0 +1,497 @@
+
+*** Running vivado
+    with args -log digicode_chenillard.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source digicode_chenillard.tcl
+
+
+****** Vivado v2018.2.1 (64-bit)
+  **** SW Build 2288692 on Thu Jul 26 18:23:50 MDT 2018
+  **** IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source digicode_chenillard.tcl -notrace
+Command: synth_design -top digicode_chenillard -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 22558 
+Terminated helper unrecognised option '-nojournal'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1279.422 ; gain = 86.766 ; free physical = 1128 ; free virtual = 8907
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'digicode_chenillard' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/digicode_chenillard.vhd:41]
+INFO: [Synth 8-3491] module 'digicode' declared at '/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/digicode.vhd:34' bound to instance 'cmp_digicode' of component 'digicode' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/digicode_chenillard.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'digicode' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/digicode.vhd:41]
+INFO: [Synth 8-3491] module 'clkdiv' declared at '/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/clkdiv.vhd:35' bound to instance 'cmp_clock' of component 'clkdiv' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/digicode.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'clkdiv' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/clkdiv.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'clkdiv' (1#1) [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/clkdiv.vhd:41]
+INFO: [Synth 8-3491] module 'btn_pulse' declared at '/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/btn_pulse.vhd:34' bound to instance 'cmp_btnR' of component 'btn_pulse' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/digicode.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'btn_pulse' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/btn_pulse.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'btn_pulse' (2#1) [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/btn_pulse.vhd:41]
+INFO: [Synth 8-3491] module 'btn_pulse' declared at '/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/btn_pulse.vhd:34' bound to instance 'cmp_btnD' of component 'btn_pulse' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/digicode.vhd:72]
+INFO: [Synth 8-3491] module 'btn_pulse' declared at '/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/btn_pulse.vhd:34' bound to instance 'cmp_btnL' of component 'btn_pulse' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/digicode.vhd:73]
+INFO: [Synth 8-3491] module 'btn_pulse' declared at '/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/btn_pulse.vhd:34' bound to instance 'cmp_btnU' of component 'btn_pulse' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/digicode.vhd:74]
+INFO: [Synth 8-3491] module 'btn_pulse' declared at '/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/btn_pulse.vhd:34' bound to instance 'cmp_btnC' of component 'btn_pulse' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/digicode.vhd:75]
+INFO: [Synth 8-3491] module 'fsm' declared at '/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/fsm.vhd:34' bound to instance 'cmp_fsm' of component 'fsm' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/digicode.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'fsm' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/fsm.vhd:41]
+INFO: [Synth 8-3491] module 'btn_to_number' declared at '/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/btn_to_number.vhd:34' bound to instance 'cmp' of component 'btn_to_number' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/fsm.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'btn_to_number' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/btn_to_number.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'btn_to_number' (3#1) [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/btn_to_number.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'fsm' (4#1) [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/fsm.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'digicode' (5#1) [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/digicode.vhd:41]
+INFO: [Synth 8-3491] module 'chenillard' declared at '/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/imports/new/chenillard.vhd:34' bound to instance 'cmp_chenillard' of component 'chenillard' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/digicode_chenillard.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'chenillard' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/imports/new/chenillard.vhd:41]
+INFO: [Synth 8-3491] module 'clk_div' declared at '/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/imports/new/clk_div.vhd:35' bound to instance 'clock' of component 'clk_div' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/imports/new/chenillard.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'clk_div' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/imports/new/clk_div.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'clk_div' (6#1) [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/imports/new/clk_div.vhd:40]
+INFO: [Synth 8-3491] module 'shift_vector' declared at '/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/imports/new/shift_vector.vhd:35' bound to instance 'shift_v' of component 'shift_vector' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/imports/new/chenillard.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'shift_vector' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/imports/new/shift_vector.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'shift_vector' (7#1) [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/imports/new/shift_vector.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'chenillard' (8#1) [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/imports/new/chenillard.vhd:41]
+INFO: [Synth 8-3491] module 'clk_div' declared at '/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/imports/new/clk_div.vhd:35' bound to instance 'cmp_clock' of component 'clk_div' [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/digicode_chenillard.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'digicode_chenillard' (9#1) [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/new/digicode_chenillard.vhd:41]
+WARNING: [Synth 8-3331] design shift_vector has unconnected port btnC
+WARNING: [Synth 8-3331] design shift_vector has unconnected port btnU
+WARNING: [Synth 8-3331] design shift_vector has unconnected port btnL
+WARNING: [Synth 8-3331] design shift_vector has unconnected port btnR
+WARNING: [Synth 8-3331] design shift_vector has unconnected port btnD
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1324.047 ; gain = 131.391 ; free physical = 1137 ; free virtual = 8917
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1324.047 ; gain = 131.391 ; free physical = 1137 ; free virtual = 8916
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1324.047 ; gain = 131.391 ; free physical = 1137 ; free virtual = 8916
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/constrs_1/imports/TP1/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/digicode_chenillard_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/digicode_chenillard_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1641.383 ; gain = 0.000 ; free physical = 878 ; free virtual = 8659
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1641.383 ; gain = 448.727 ; free physical = 957 ; free virtual = 8738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1641.383 ; gain = 448.727 ; free physical = 957 ; free virtual = 8738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1641.383 ; gain = 448.727 ; free physical = 958 ; free virtual = 8740
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'fsm'
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sig_i" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/m1/texierl/Documents/AEO/TP5/TP5.srcs/sources_1/imports/new/shift_vector.vhd:52]
+INFO: [Synth 8-5545] ROM "led" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      s1 |                              000 |                              000
+                      s2 |                              001 |                              001
+                      s3 |                              010 |                              010
+                      s4 |                              011 |                              011
+                  iSTATE |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'fsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1641.383 ; gain = 448.727 ; free physical = 950 ; free virtual = 8732
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 35    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module digicode_chenillard 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module clkdiv 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
+Module btn_pulse 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 6     
+Module btn_to_number 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      3 Bit        Muxes := 1     
+Module fsm 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module clk_div 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
+Module shift_vector 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "led" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1641.383 ; gain = 448.727 ; free physical = 935 ; free virtual = 8718
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1641.383 ; gain = 448.727 ; free physical = 809 ; free virtual = 8593
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1641.383 ; gain = 448.727 ; free physical = 808 ; free virtual = 8592
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1649.391 ; gain = 456.734 ; free physical = 806 ; free virtual = 8591
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 1649.391 ; gain = 456.734 ; free physical = 806 ; free virtual = 8591
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 1649.391 ; gain = 456.734 ; free physical = 806 ; free virtual = 8591
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 1649.391 ; gain = 456.734 ; free physical = 806 ; free virtual = 8591
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 1649.391 ; gain = 456.734 ; free physical = 806 ; free virtual = 8591
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 1649.391 ; gain = 456.734 ; free physical = 806 ; free virtual = 8591
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 1649.391 ; gain = 456.734 ; free physical = 806 ; free virtual = 8591
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     3|
+|2     |CARRY4 |    43|
+|3     |LUT1   |     5|
+|4     |LUT2   |     1|
+|5     |LUT3   |    20|
+|6     |LUT4   |    14|
+|7     |LUT5   |    23|
+|8     |LUT6   |    21|
+|9     |FDRE   |   167|
+|10    |IBUF   |    14|
+|11    |OBUF   |     8|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------------+-------------+------+
+|      |Instance         |Module       |Cells |
++------+-----------------+-------------+------+
+|1     |top              |             |   319|
+|2     |  cmp_chenillard |chenillard   |    88|
+|3     |    clock        |clk_div_4    |    44|
+|4     |    shift_v      |shift_vector |    44|
+|5     |  cmp_clock      |clk_div      |    44|
+|6     |  cmp_digicode   |digicode     |   103|
+|7     |    cmp_btnC     |btn_pulse    |     8|
+|8     |    cmp_btnD     |btn_pulse_0  |     9|
+|9     |    cmp_btnL     |btn_pulse_1  |     9|
+|10    |    cmp_btnR     |btn_pulse_2  |     9|
+|11    |    cmp_btnU     |btn_pulse_3  |    13|
+|12    |    cmp_clock    |clkdiv       |    32|
+|13    |    cmp_fsm      |fsm          |    23|
++------+-----------------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 1649.391 ; gain = 456.734 ; free physical = 806 ; free virtual = 8591
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1649.391 ; gain = 139.398 ; free physical = 861 ; free virtual = 8645
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 1649.391 ; gain = 456.734 ; free physical = 861 ; free virtual = 8645
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 57 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+56 Infos, 37 Warnings, 32 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 1649.391 ; gain = 462.695 ; free physical = 847 ; free virtual = 8631
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/m1/texierl/Documents/AEO/TP5/TP5.runs/synth_1/digicode_chenillard.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file digicode_chenillard_utilization_synth.rpt -pb digicode_chenillard_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1673.402 ; gain = 0.000 ; free physical = 847 ; free virtual = 8631
+INFO: [Common 17-206] Exiting Vivado at Mon Nov  5 13:03:26 2018...

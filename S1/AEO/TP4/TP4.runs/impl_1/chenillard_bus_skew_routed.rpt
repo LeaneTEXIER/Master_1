@@ -1,0 +1,15 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
+| Date         : Wed Oct 17 08:50:11 2018
+| Host         : a13p6 running 64-bit Ubuntu 18.04.1 LTS
+| Command      : report_bus_skew -warn_on_violation -file chenillard_bus_skew_routed.rpt -pb chenillard_bus_skew_routed.pb -rpx chenillard_bus_skew_routed.rpx
+| Design       : chenillard
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

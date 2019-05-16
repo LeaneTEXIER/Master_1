@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight = "0"
+        android:layout_margin="@dimen/margin_create_modif_note_champs">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/name_note"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLength="32"
+            android:maxLines="1"
+            android:inputType="text"
+            android:hint="@string/name_of_my_note"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight = "0"
+        android:layout_margin="@dimen/margin_create_modif_note_champs">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/date_note"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="date"
+            android:nextFocusDown="@+id/desc_note"
+            android:hint="@string/date"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_weight = "1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_create_modif_note_champs">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/desc_note"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:hint="@string/description"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_weight = "0"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/margin_create_modif_note_champs">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tags_note"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:hint="@string/tags"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight = "0"
+        android:layout_margin="@dimen/margin_create_modif_note_champs"
+        android:textSize="@dimen/details_trip_text_size_buttons"
+        android:background="@color/colorPrimary"
+        android:text="@string/create"
+        android:textColor="@color/colorAccent" />
+
+</LinearLayout>

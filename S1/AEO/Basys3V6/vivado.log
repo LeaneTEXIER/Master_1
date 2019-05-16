@@ -1,0 +1,66 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Nov 20 21:01:16 2018
+# Process ID: 16748
+# Current directory: C:/Users/jld/Downloads/Basys3V6.xpr/Basys3V6
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17388 C:\Users\jld\Downloads\Basys3V6.xpr\Basys3V6\Basys3V6.xpr
+# Log file: C:/Users/jld/Downloads/Basys3V6.xpr/Basys3V6/vivado.log
+# Journal file: C:/Users/jld/Downloads/Basys3V6.xpr/Basys3V6\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/jld/Downloads/Basys3V6.xpr/Basys3V6/Basys3V6.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/jld/Downloads/Basys3V6/.Xil/Vivado-4368-jld-HP/PrjAr/_X_' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:12 . Memory (MB): peak = 858.980 ; gain = 87.383
+update_compile_order -fileset sources_1
+launch_runs impl_2 -to_step write_bitstream -jobs 24
+[Tue Nov 20 21:04:25 2018] Launched timer_synth_1, multiply_synth_1, my_ram_synth_1, synth_1...
+Run output will be captured here:
+timer_synth_1: C:/Users/jld/Downloads/Basys3V6.xpr/Basys3V6/Basys3V6.runs/timer_synth_1/runme.log
+multiply_synth_1: C:/Users/jld/Downloads/Basys3V6.xpr/Basys3V6/Basys3V6.runs/multiply_synth_1/runme.log
+my_ram_synth_1: C:/Users/jld/Downloads/Basys3V6.xpr/Basys3V6/Basys3V6.runs/my_ram_synth_1/runme.log
+synth_1: C:/Users/jld/Downloads/Basys3V6.xpr/Basys3V6/Basys3V6.runs/synth_1/runme.log
+[Tue Nov 20 21:04:26 2018] Launched impl_2...
+Run output will be captured here: C:/Users/jld/Downloads/Basys3V6.xpr/Basys3V6/Basys3V6.runs/impl_2/runme.log
+launch_runs: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 867.262 ; gain = 0.000
+archive_project C:/Users/jld/Downloads/Basys3V6.xpr/Basys3V6.xpr.zip -temp_dir C:/Users/jld/Downloads/Basys3V6.xpr/Basys3V6/.Xil/Vivado-16748-jld-HP -force -exclude_run_results -include_local_ip_cache -include_config_settings
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/jld/Downloads/Basys3V6.xpr/Basys3V6/.Xil/Vivado-16748-jld-HP' for archiving project
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [Coretcl 2-135] resetting runs for excluding generated files from archive...
+WARNING: [Coretcl 2-105] Run 'synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'synth_1'...
+WARNING: [Coretcl 2-105] Run 'timer_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'timer_synth_1'...
+WARNING: [Coretcl 2-105] Run 'multiply_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'multiply_synth_1'...
+WARNING: [Coretcl 2-105] Run 'my_ram_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'my_ram_synth_1'...
+INFO: [Coretcl 2-133] re-setting run 'impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'impl_2'...
+INFO: [Coretcl 2-133] re-setting run 'timer_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'multiply_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'my_ram_impl_1'...
+INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'multiply'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'multiply'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'my_ram'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'my_ram'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'timer'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'timer'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'

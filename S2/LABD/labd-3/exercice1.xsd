@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:element name="exercice1">
+ 	<xsd:complexType>
+ 		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="heure" type="heureType" />
+				<xsd:element name="nombre" type="nombreType" />
+				<xsd:element name="chaineQuatreCaractere" type="chaineQuatreCaractereType" />
+				<xsd:element name="chaineSpeciale" type="chaineSpecialeType" />
+				<xsd:element name="numISBN" type="numISBNType" />
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:simpleType name="heureType">
+	<xsd:restriction base="xsd:time">
+		<xsd:minInclusive value="02:30:00"/>
+		<xsd:maxInclusive value="16:50:00"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="nombreType">
+	<xsd:restriction base="xsd:float">
+		<xsd:minInclusive value="-3476.4"/>
+		<xsd:maxExclusive value="5"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="chaineQuatreCaractereType">
+	<xsd:restriction base="xsd:string">
+		<xsd:length value="4"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="chaineSpecialeType">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="jpg"/>
+		<xsd:enumeration value="gif"/>
+		<xsd:enumeration value="png"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="numISBNType">
+	<xsd:restriction base="xsd:nonNegativeInteger">
+		<xsd:totalDigits value="13"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+</xsd:schema>

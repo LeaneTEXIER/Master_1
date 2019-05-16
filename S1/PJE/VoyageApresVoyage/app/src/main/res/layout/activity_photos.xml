@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.PhotosList.PhotosActivity">
+
+    <TextView
+        android:id="@+id/myPhotosTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/my_photos"
+        android:layout_margin="@dimen/title_margin"
+        android:background="@color/colorPrimary"
+        android:textSize="@dimen/title_size"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/search_tags_margin"
+        android:orientation="horizontal"
+        android:focusableInTouchMode="true">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/search" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonValider"
+            android:padding="@dimen/margin_create_modif_note_champs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@color/colorPrimary"
+            android:onClick="showSelectedNotes"
+            android:text="@string/valid"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/create_text_size_button"/>
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/gridViewPhotos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnWidth="@dimen/size_columns_photos_videos"
+            android:gravity="center"
+            android:horizontalSpacing="@dimen/spacing_photos_videos"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/spacing_photos_videos"
+            tools:ignore="MissingConstraints" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/ajout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/margin_button_add_diff_notes"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_add_black_24dp"
+            android:onClick="dispatchTakePictureIntentView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

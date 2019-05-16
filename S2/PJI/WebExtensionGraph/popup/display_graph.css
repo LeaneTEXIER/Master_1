@@ -1,0 +1,66 @@
+body {
+  font: 17px sans-serif;
+  background-color: rgb(240,240,240);
+}
+
+.axis path{
+  fill: none;
+  stroke : black;
+}
+
+.axis text{
+  font-size: 10px;
+}
+
+.axis .xLabel, .axis .yLabel {
+  font-size: 16px;
+}
+
+.dot {
+  stroke: #000;
+}
+
+.tooltip {
+  position: absolute;
+  width: 220px;
+  pointer-events: none;
+  font-size: 14px;
+  background-color: white;
+}
+
+.informations {
+  font-style: italic;
+  font-size: 14px;
+  margin-left: 20px;
+}
+
+.title {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.titleGraph{
+  text-align: center;
+}
+
+.changeAxis {
+  display: none;
+}
+
+.alert{
+  color : red;
+  text-align: center;
+}
+
+button{
+  background-color: rgb(30,144,255);
+  padding: 1%;
+  margin-left: 2%;
+  border-color : darkblue;
+  color : honeydew;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+}

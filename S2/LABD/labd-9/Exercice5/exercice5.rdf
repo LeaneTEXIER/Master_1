@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ns0="http://fr.dbpedia.org/property/"
+         xmlns:ns1="http://www.labd.org/2015/sport/schema#">
+
+  <rdfs:Class rdf:about="http://www.labd.org/2015/sport/schema#Sport">
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.labd.org/2015/sport/schema#SportCollectif">
+    <rdfs:subClassOf rdf:resource="http://www.labd.org/2015/sport/schema#Sport"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.labd.org/2015/sport/schema#SportCollectifBallon">
+    <rdfs:subClassOf rdf:resource="http://www.labd.org/2015/sport/schema#SportCollectif"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.labd.org/2015/sport/schema#SportIndividuel">
+    <rdfs:subClassOf rdf:resource="http://www.labd.org/2015/sport/schema#Sport"/>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://www.labd.org/2015/sport/schema#Lieu">
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal"/>
+    <rdfs:domain rdf:resource="http://www.labd.org/2015/sport/schema#Sport"/>
+  </rdf:Property>
+
+  <rdfs:Class rdf:about="http://www.labd.org/2015/sport/schema#Stade">
+    <rdfs:subClassOf rdf:resource="http://www.labd.org/2015/sport/schema#Lieu"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.labd.org/2015/sport/schema#Terrain">
+    <rdfs:subClassOf rdf:resource="http://www.labd.org/2015/sport/schema#Lieu"/>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://www.labd.org/2015/sport/schema#NbEquipe">
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal"/>
+    <rdfs:domain rdf:resource="http://www.labd.org/2015/sport/schema#SportCollectif"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.labd.org/2015/sport/schema#NbJoueursEquipe">
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal"/>
+    <rdfs:domain rdf:resource="http://www.labd.org/2015/sport/schema#SportCollectif"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.labd.org/2015/sport/schema#Objectif">
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal"/>
+    <rdfs:domain rdf:resource="http://www.labd.org/2015/sport/schema#Sport"/>
+  </rdf:Property>
+
+  <rdfs:Class rdf:about="http://www.labd.org/2015/sport/schema#Panier">
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.labd.org/2015/sport/schema#But">
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.labd.org/2015/sport/schema#Football">
+    <rdfs:subClassOf rdf:resource="http://www.labd.org/2015/sport/schema#SportCollectifBallon"/>
+    <ns0:nom xml:lang="fr">Football</ns0:nom>
+    <ns0:nom xml:lang="en">Soccer</ns0:nom>
+    <ns1:Lieu rdf:resource="http://www.labd.org/2015/sport/schema#Stade"/>
+    <ns1:Objectif rdf:resource="http://www.labd.org/2015/sport/schema#But"/>
+    <ns1:NbJoueursEquipe>11</ns1:NbJoueursEquipe>
+    <ns1:NbEquipe>2</ns1:NbEquipe>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.labd.org/2015/sport/schema#Basket">
+    <rdfs:subClassOf rdf:resource="http://www.labd.org/2015/sport/schema#SportCollectifBallon"/>
+    <ns0:nom xml:lang="fr">Basketball</ns0:nom>
+    <ns1:Lieu rdf:resource="http://www.labd.org/2015/sport/schema#Terrain"/>
+    <ns1:Objectif rdf:resource="http://www.labd.org/2015/sport/schema#Panier"/>
+    <ns1:NbJoueursEquipe>5</ns1:NbJoueursEquipe>
+    <ns1:NbEquipe>2</ns1:NbEquipe>
+  </rdfs:Class>
+
+</rdf:RDF>

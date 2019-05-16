@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  		xmlns:insee="http://xml.insee.fr/schema"
+  		xmlns="http://www.lifl.fr/livretFamille"
+  		targetNamespace="http://www.lifl.fr/livretFamille">
+			
+	<xs:import namespace="http://xml.insee.fr/schema"
+			schemaLocation="http://xml.insee.fr/schema/individu.xsd"/>
+
+	<xs:import namespace="http://xml.insee.fr/schema"
+			schemaLocation="http://xml.insee.fr/schema/insee-commun.xsd"/>
+			
+	<xs:element name="livret" type="livretDeFamille"/>
+    		
+    	<xs:complexType name="livretDeFamille">
+			<xs:sequence>	
+				<xs:element name="Parents" type="parentsType"/>
+				<xs:element name="Enfants" type="enfantsType" minOccurs="0"/>
+			</xs:sequence>
+	</xs:complexType>
+  	
+  	<xs:complexType name="parentsType">
+  		<xs:sequence>
+  			<xs:element name="Pere"  type="parentType"/>
+  			<xs:element name="Mere"  type="parentType"/>
+  			<xs:element name="Mariage" type="mariageType"/>
+  		</xs:sequence>
+  	</xs:complexType>
+  	
+  	<xs:complexType name="parentType">
+	 	<xs:complexContent>
+	  		<xs:restriction base="insee:IndividuSansFiliationType">
+	        			<xs:sequence>
+	           			<xs:element name="Noms" type="insee:NomsEtatCivilType"/>
+	          				<xs:element name="Prenoms" type="insee:PrenomsEtatCivilType"/>
+	          				<xs:element name="Naissance" type="insee:NaissanceType"/>
+	          				<xs:element name="DateDeces" type="insee:DateSoupleType" minOccurs="0"/>
+					<xs:element name="LieuDeces" type="insee:LieuType" minOccurs="0"/>
+	        			</xs:sequence>
+	      		</xs:restriction>
+	 	</xs:complexContent>
+  	 </xs:complexType>
+  	 
+  	 <xs:complexType name="mariageType">
+		<xs:sequence>
+			<xs:element name="DateMariage" type="insee:DateSoupleType"/>
+			<xs:element name="LieuMariage" type="insee:LieuType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="enfantsType">
+		<xs:sequence>
+			<xs:element name="Naissance" type="insee:NaissanceType"/>
+			<xs:element name="DateDeces" type="insee:DateSoupleType" minOccurs="0"/>
+			<xs:element name="LieuDeces" type="insee:LieuType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+  	
+</xs:schema>

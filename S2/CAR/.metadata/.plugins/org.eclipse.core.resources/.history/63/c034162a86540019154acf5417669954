@@ -1,0 +1,264 @@
+/**
+ * 
+ */
+package com.lightbend.akka.tp3;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.lightbend.akka.tp3.actor.GraphNode;
+import com.lightbend.akka.tp3.actor.TreeNode;
+import com.lightbend.akka.tp3.message.AddChild;
+import com.lightbend.akka.tp3.message.AddLink;
+import com.lightbend.akka.tp3.message.Message;
+import com.lightbend.akka.tp3.message.RemoveLink;
+
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+import akka.testkit.javadsl.TestKit;
+
+/**
+ * @author Celine, Leane et Marine
+ *
+ */
+public class AkkaTest {
+
+	static ActorSystem system;
+
+	@Before
+	public void setup() {
+		system = ActorSystem.create();
+	}
+
+	@AfterClass
+	public static void teardown() {
+		TestKit.shutdownActorSystem(system);
+		system = null;
+	}
+
+	@Test
+	public void testMessageTreeOK() {
+		final TestKit testProbe = new TestKit(system);
+		Map<String, ActorRef> nodes = new HashMap<String, ActorRef>();
+		List<ActorRef> l1 = new ArrayList<ActorRef>();
+		l1.add(testProbe.getRef());
+		nodes.put("1", system.actorOf(Props.create(TreeNode.class, "1", l1)));
+		nodes.get("1").tell("testMessageTreeOK", ActorRef.noSender());
+		String message = testProbe.expectMsgClass(String.class);
+		assertEquals("testMessageTreeOK", message);
+	}
+
+	@Test
+	public void testMessageFromNodeToNodeTreeOK() {
+		final TestKit testProbe = new TestKit(system);
+		final TestKit testProbe2 = new TestKit(system);
+		Map<String, ActorRef> nodes = new HashMap<String, ActorRef>();
+		List<ActorRef> l2 = new ArrayList<ActorRef>();
+		l2.add(testProbe2.getRef());
+		nodes.put("2", system.actorOf(Props.create(TreeNode.class, "2", l2)));
+		List<ActorRef> l1 = new ArrayList<ActorRef>();
+		l1.add(testProbe.getRef());
+		l1.add(nodes.get("2"));
+		nodes.put("1", system.actorOf(Props.create(TreeNode.class, "1", l1)));
+		nodes.get("1").tell("testMessageFromNodeToNodeTreeOK", ActorRef.noSender());
+		String message = testProbe.expectMsgClass(String.class);
+		String message2 = testProbe2.expectMsgClass(String.class);
+		assertEquals("testMessageFromNodeToNodeTreeOK", message);
+		assertEquals("testMessageFromNodeToNodeTreeOK", message2);
+	}
+
+	@Test
+	public void testMessageGraphOK() {
+		final TestKit testProbe = new TestKit(system);
+		Map<String, ActorRef> nodes = new HashMap<String, ActorRef>();
+		List<ActorRef> l1 = new ArrayList<ActorRef>();
+		l1.add(testProbe.getRef());
+		nodes.put("1", system.actorOf(Props.create(GraphNode.class, "1", l1)));
+		nodes.get("1").tell(new Message(0, "testMessageGraphOK"), ActorRef.noSender());
+		Message message = testProbe.expectMsgClass(Message.class);
+		assertEquals("testMessageGraphOK", message.getMessage());
+	}
+
+	@Test
+	public void testMessageFromNodeToNodeGraphOK() {
+		final TestKit testProbe = new TestKit(system);
+		final TestKit testProbe2 = new TestKit(system);
+		Map<String, ActorRef> nodes = new HashMap<String, ActorRef>();
+		List<ActorRef> l2 = new ArrayList<ActorRef>();
+		l2.add(testProbe2.getRef());
+		nodes.put("2", system.actorOf(Props.create(GraphNode.class, "2", l2)));
+		List<ActorRef> l1 = new ArrayList<ActorRef>();
+		l1.add(testProbe.getRef());
+		l1.add(nodes.get("2"));
+		nodes.put("1", system.actorOf(Props.create(GraphNode.class, "1", l1)));
+		nodes.get("1").tell(new Message(0, "testMessageFromNodeToNodeGraphOK"), ActorRef.noSender());
+		Message message = testProbe.expectMsgClass(Message.class);
+		Message message2 = testProbe2.expectMsgClass(Message.class);
+		assertEquals("testMessageFromNodeToNodeGraphOK", message.getMessage());
+		assertEquals("testMessageFromNodeToNodeGraphOK", message2.getMessage());
+	}
+
+	@Test
+	public void testAddLinkGraphOK() {
+		final TestKit testProbe = new TestKit(system);
+		final TestKit testProbe2 = new TestKit(system);
+		Map<String, ActorRef> nodes = new HashMap<String, ActorRef>();
+		// Cr�ation de deux noeuds
+		List<ActorRef> l2 = new ArrayList<ActorRef>();
+		l2.add(testProbe2.getRef());
+		nodes.put("2", system.actorOf(Props.create(GraphNode.class, "2", l2)));
+
+		List<ActorRef> l1 = new ArrayList<ActorRef>();
+		l1.add(testProbe.getRef());
+		nodes.put("1", system.actorOf(Props.create(GraphNode.class, "1", l1)));
+
+		// On envoie un message � noeud 1 et noeud 2 ne le re�oit pas car il n'est pas
+		// voisin de noeud 1
+		nodes.get("1").tell(new Message(0, "testAddLinkGraphOK1"), ActorRef.noSender());
+		testProbe2.expectNoMessage();
+		Message message = testProbe.expectMsgClass(Message.class);
+		assertEquals("testAddLinkGraphOK1", message.getMessage());
+
+		// On ajouter le noeud 2 en tant que voisin du noeud 1
+		nodes.get("1").tell(new AddLink(nodes.get("2"), "2"), ActorRef.noSender());
+
+		// Cette fois ci, node 2 doit recevoir le message
+		nodes.get("1").tell(new Message(1, "testAddLinkGraphOK2"), ActorRef.noSender());
+		message = testProbe.expectMsgClass(Message.class);
+		Message message2 = testProbe2.expectMsgClass(Message.class);
+		assertEquals("testAddLinkGraphOK2", message.getMessage());
+		assertEquals("testAddLinkGraphOK2", message2.getMessage());
+	}
+
+	@Test
+	public void testRemoveLinkGraphOK() {
+		final TestKit testProbe = new TestKit(system);
+		final TestKit testProbe2 = new TestKit(system);
+		Map<String, ActorRef> nodes = new HashMap<String, ActorRef>();
+		// Cr�ation de deux noeuds
+		List<ActorRef> l2 = new ArrayList<ActorRef>();
+		l2.add(testProbe2.getRef());
+		nodes.put("2", system.actorOf(Props.create(GraphNode.class, "2", l2)));
+
+		List<ActorRef> l1 = new ArrayList<ActorRef>();
+		l1.add(testProbe.getRef());
+		nodes.put("1", system.actorOf(Props.create(GraphNode.class, "1", l1)));
+
+		// On ajoute noeud 2 en tant que voisin du noeud 1
+		nodes.get("1").tell(new AddLink(nodes.get("2"), "2"), ActorRef.noSender());
+		nodes.get("1").tell(new Message(1, "testRemoveLinkGraphOK1"), ActorRef.noSender());
+		Message message = testProbe.expectMsgClass(Message.class);
+		Message message2 = testProbe2.expectMsgClass(Message.class);
+		assertEquals("testRemoveLinkGraphOK1", message.getMessage());
+		assertEquals("testRemoveLinkGraphOK1", message2.getMessage());
+
+		// On supprime noeud 2 en tant que voisin du noeud 1
+		nodes.get("1").tell(new RemoveLink(nodes.get("2"), "2"), ActorRef.noSender());
+		nodes.get("1").tell(new Message(3, "testRemoveLinkGraphOK2"), ActorRef.noSender());
+		// On ne devrait pas recevoir le message 
+		testProbe2.expectNoMessage();
+		message = testProbe.expectMsgClass(Message.class);
+		assertEquals("testRemoveLinkGraphOK2", message.getMessage());
+	}
+	
+	@Test
+	public void testAddChildTreeOK() {
+		final TestKit testProbe = new TestKit(system);
+		final TestKit testProbe2 = new TestKit(system);
+		Map<String, ActorRef> nodes = new HashMap<String, ActorRef>();
+		// Cr�ation de deux noeuds
+		List<ActorRef> l2 = new ArrayList<ActorRef>();
+		l2.add(testProbe2.getRef());
+		nodes.put("2", system.actorOf(Props.create(TreeNode.class, "2", l2)));
+
+		List<ActorRef> l1 = new ArrayList<ActorRef>();
+		l1.add(testProbe.getRef());
+		nodes.put("1", system.actorOf(Props.create(TreeNode.class, "1", l1)));
+
+		// On envoie un message � noeud 1 et noeud 2 ne le re�oit pas car il n'est pas
+		// fils de noeud 1
+		nodes.get("1").tell("testAddChildTreeOK1", ActorRef.noSender());
+		testProbe2.expectNoMessage();
+		String message = testProbe.expectMsgClass(String.class);
+		assertEquals("testAddChildTreeOK1", message);
+
+		// On ajouter noeud 2 en tant que fils du noeud 1
+		nodes.get("1").tell(new AddChild(nodes.get("2"), "2"), ActorRef.noSender());
+
+		// Cette fois ci, noeud 2 doit recevoir le message
+		nodes.get("1").tell("testAddChildTreeOK2", ActorRef.noSender());
+		message = testProbe.expectMsgClass(String.class);
+		String message2 = testProbe2.expectMsgClass(String.class);
+		assertEquals("testAddChildTreeOK2", message);
+		assertEquals("testAddChildTreeOK2", message2);
+		
+		// C'est un arbre donc si envois message au noeud 2, noeud 1 ne le recoit pas
+		nodes.get("2").tell("testAddChildTreeOK3", ActorRef.noSender());
+		testProbe.expectNoMessage();
+		message2 = testProbe2.expectMsgClass(String.class);
+		assertEquals("testAddChildTreeOK3", message2);
+	}
+
+	@Test
+	public void testRemoveChildTreeOK() {
+		final TestKit testProbe = new TestKit(system);
+		final TestKit testProbe2 = new TestKit(system);
+		Map<String, ActorRef> nodes = new HashMap<String, ActorRef>();
+		// Cr�ation de deux noeuds
+		List<ActorRef> l2 = new ArrayList<ActorRef>();
+		l2.add(testProbe2.getRef());
+		nodes.put("2", system.actorOf(Props.create(TreeNode.class, "2", l2)));
+
+		List<ActorRef> l1 = new ArrayList<ActorRef>();
+		l1.add(testProbe.getRef());
+		nodes.put("1", system.actorOf(Props.create(TreeNode.class, "1", l1)));
+
+		// On ajoute noeud 2 en tant que fils du noeud 1
+		nodes.get("1").tell(new AddChild(nodes.get("2"), "2"), ActorRef.noSender());
+		nodes.get("1").tell(new Message(1, "testRemoveLinkGraphOK1"), ActorRef.noSender());
+		Message message = testProbe.expectMsgClass(Message.class);
+		Message message2 = testProbe2.expectMsgClass(Message.class);
+		assertEquals("testRemoveLinkGraphOK1", message.getMessage());
+		assertEquals("testRemoveLinkGraphOK1", message2.getMessage());
+
+		// On supprime noeud 2 en tant que fils du noeud 1
+		nodes.get("1").tell(new RemoveLink(nodes.get("2"), "2"), ActorRef.noSender());
+		nodes.get("1").tell(new Message(3, "testRemoveLinkGraphOK2"), ActorRef.noSender());
+		// On ne devrait pas recevoir le message
+		testProbe2.expectNoMessage();
+		message = testProbe.expectMsgClass(Message.class);
+		assertEquals("testRemoveLinkGraphOK2", message.getMessage());
+	}	
+
+	@Test
+	public void testMessageTreeFail() {
+		final TestKit testProbe = new TestKit(system);
+		Map<String, ActorRef> nodes = new HashMap<String, ActorRef>();
+		List<ActorRef> l1 = new ArrayList<ActorRef>();
+		l1.add(testProbe.getRef());
+		nodes.put("1", system.actorOf(Props.create(TreeNode.class, "1", l1)));
+		nodes.get("1").tell(01234, ActorRef.noSender());
+		testProbe.expectNoMessage();
+	}
+	
+	@Test
+	public void testMessageGraphFail() {
+		final TestKit testProbe = new TestKit(system);
+		Map<String, ActorRef> nodes = new HashMap<String, ActorRef>();
+		List<ActorRef> l1 = new ArrayList<ActorRef>();
+		l1.add(testProbe.getRef());
+		nodes.put("1", system.actorOf(Props.create(GraphNode.class, "1", l1)));
+		nodes.get("1").tell(01234, ActorRef.noSender());
+		testProbe.expectNoMessage();
+	}
+
+}

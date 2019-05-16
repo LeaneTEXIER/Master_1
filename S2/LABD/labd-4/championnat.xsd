@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:element name="championnat"  type="championnatType">
+	<xsd:keyref name="cleClubReceveur" refer="cleClub">
+		<xsd:selector xpath="journées/journée/rencontre"/>
+		<xsd:field xpath="clubReceveur"/>
+	</xsd:keyref>
+	<xsd:keyref name="cleClubInvité" refer="cleClub">
+		<xsd:selector xpath="journées/journée/rencontre"/>
+		<xsd:field xpath="clubInvité"/>
+	</xsd:keyref>	
+</xsd:element>
+
+<xsd:complexType name="championnatType">
+	<xsd:sequence maxOccurs="1" minOccurs="1">
+		 <xsd:element name="clubs" type="clubsType">
+		 	<xsd:key name="cleClub">
+				<xsd:selector xpath="club"/>
+				<xsd:field xpath="@id"/>
+			</xsd:key>
+		</xsd:element>
+		<xsd:element name="journées" type="journeesType">
+		 	<xsd:key name="cleJournee">
+				<xsd:selector xpath="journée"/>
+				<xsd:field xpath="@num"/>
+			</xsd:key>
+		</xsd:element>
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="clubsType">
+	<xsd:sequence minOccurs="20" maxOccurs="20">
+		<xsd:element name="club" type="clubType"/>
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="clubType">
+	<xsd:sequence>
+		<xsd:element name="nom" type="xsd:string" />
+		<xsd:element name="ville" type="xsd:string" />
+	</xsd:sequence>
+	<xsd:attribute name="id" type="xsd:string" use="required"/>
+</xsd:complexType>
+
+<xsd:complexType name="journeesType">
+	<xsd:sequence minOccurs="38" maxOccurs="38">
+		<xsd:element name="journée" type="journeeType" />
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="journeeType">
+	<xsd:sequence maxOccurs="1" minOccurs="1">
+		<xsd:element name="date" type="xsd:date" />
+		<xsd:sequence minOccurs="10" maxOccurs="10">
+			<xsd:element name="rencontre" type="rencontreType" />
+		</xsd:sequence>
+	</xsd:sequence>
+	<xsd:attribute name="num" type="xsd:integer" use="required"/>
+</xsd:complexType>
+
+<xsd:complexType name="rencontreType">
+	<xsd:sequence maxOccurs="1" minOccurs="1">	
+		<xsd:element name="clubReceveur" type="xsd:string" />
+		<xsd:element name="clubInvité" type="xsd:string" />
+		<xsd:element name="score" type="score" />
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:simpleType name="score">
+	<xsd:restriction base="xsd:string">
+		<xsd:pattern value="[0-9]+ [0-9]+"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+</xsd:schema>

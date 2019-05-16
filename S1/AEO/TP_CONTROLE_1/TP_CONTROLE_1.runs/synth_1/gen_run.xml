@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1541586086">
+  <File Type="VDS-TIMING-PB" Name="alarme_top_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="alarme_top_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="alarme_top.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="alarme_top_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="alarme_top_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="alarme_top_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="alarme_top.vds"/>
+  <File Type="REPORTS-TCL" Name="alarme_top_reports.tcl"/>
+  <File Type="PA-TCL" Name="alarme_top.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/fsm.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/exo1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/alarme_top.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/clk_div.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../TP5/TP5.srcs/sources_1/imports/new/clk_div.vhd"/>
+        <Attr Name="ImportTime" Val="1540367688"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="alarme_top"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/TP1/Basys3_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../TP5_preparation/TP5_preparation.srcs/constrs_1/imports/TP1/Basys3_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1540373619"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

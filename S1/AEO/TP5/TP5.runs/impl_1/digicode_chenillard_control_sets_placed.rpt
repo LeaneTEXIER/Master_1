@@ -1,0 +1,75 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
+| Date         : Mon Nov  5 13:04:16 2018
+| Host         : a10p18 running 64-bit Ubuntu 18.04.1 LTS
+| Command      : report_control_sets -verbose -file digicode_chenillard_control_sets_placed.rpt
+| Design       : digicode_chenillard
+| Device       : xc7a35t
+------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    10 |
+| Unused register locations in slices containing registers |    26 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            2 |
+|    16+ |            8 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             128 |           26 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              96 |           12 |
+| Yes          | No                    | No                     |              30 |            5 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              80 |           11 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------+----------------------------+------------------------------------+------------------+----------------+
+|        Clock Signal       |        Enable Signal       |          Set/Reset Signal          | Slice Load Count | Bel Load Count |
++---------------------------+----------------------------+------------------------------------+------------------+----------------+
+|  clk_4hz_reg_BUFG         |                            |                                    |                1 |              2 |
+|  clk_4hz_reg_BUFG         | btnC_IBUF                  | reset_i_1_n_0                      |                1 |              2 |
+|  clk_4hz_reg_BUFG         | reset                      | reset_i_1_n_0                      |                2 |             16 |
+|  clockdiv                 | cmp_digicode/cmp_clock/E   |                                    |                5 |             30 |
+|  clockdiv                 |                            |                                    |               11 |             40 |
+|  cmp_chenillard/clock/CLK |                            |                                    |                6 |             42 |
+|  clk_IBUF_BUFG            |                            |                                    |                8 |             44 |
+|  clk_IBUF_BUFG            |                            | cmp_chenillard/clock/clear         |                6 |             48 |
+|  clk_IBUF_BUFG            |                            | cmp_clock/counter[0]_i_1__0_n_0    |                6 |             48 |
+|  clk_4hz_reg_BUFG         | cmp_digicode/cmp_fsm/count | cmp_digicode/cmp_fsm/count_reg[31] |                8 |             62 |
++---------------------------+----------------------------+------------------------------------+------------------+----------------+
+
+
