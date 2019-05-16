@@ -1,9 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../TP_CONTROLE_1.srcs/sources_1/new/fsm.vhd" \
-"../../../../TP_CONTROLE_1.srcs/sources_1/new/exo1.vhd" \
-"../../../../TP_CONTROLE_1.srcs/sources_1/new/alarme_top.vhd" \
-"../../../../TP_CONTROLE_1.srcs/sources_1/imports/new/clk_div.vhd" \
-
-# Do not sort compile order
-nosort

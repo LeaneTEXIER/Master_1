@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../TP5.srcs/sources_1/new/btn_to_number.vhd" \
-"../../../../TP5.srcs/sources_1/new/fsm.vhd" \
-
-# Do not sort compile order
-nosort

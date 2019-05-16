@@ -1,6 +1,0 @@
-# Add include directory.
-include_directories(.)
-include_directories(../../src)
-
-endif()
-

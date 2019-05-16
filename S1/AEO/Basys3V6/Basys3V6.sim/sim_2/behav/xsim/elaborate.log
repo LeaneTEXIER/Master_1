@@ -1,5 +1,0 @@
-Vivado Simulator 2018.2
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /local/xilinx-vivado/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 63eae339d2f54214966a768fb74c6bc8 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot masterbench_behav xil_defaultlib.masterbench xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-ERROR: [XSIM 43-3225] Cannot find design unit xil_defaultlib.masterbench in library work located at xsim.dir/work.

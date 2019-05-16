@@ -1,7 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/m1/texierl/Documents/AEO/Basys3V6/Basys3V6.ip_user_files/ip/multiply/multiply_sim_netlist.vhdl" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity multiply_luts
-INFO: [VRFC 10-307] analyzing entity multiply_mult_gen_v12_0_14_viv
-INFO: [VRFC 10-307] analyzing entity multiply_mult_gen_v12_0_14
-INFO: [VRFC 10-307] analyzing entity multiply
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/m1/texierl/Documents/AEO/Basys3V6/Basys3V6.srcs/sources_1/new/div.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity div
